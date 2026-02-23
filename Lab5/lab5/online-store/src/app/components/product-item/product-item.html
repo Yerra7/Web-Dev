@@ -1,0 +1,29 @@
+<div class="card">
+  <img [src]="product().image" [alt]="product().name">
+
+  <h3 class="title">
+    <a class="title-link" [href]="product().link" target="_blank" rel="noopener">
+      {{ product().name }}
+    </a>
+  </h3>
+
+  <p class="desc">{{ product().description }}</p>
+
+  <div class="meta">
+    <span class="price">{{ product().price }} ₸</span>
+    <span class="badge">⭐ {{ product().rating }}</span>
+  </div>
+
+  <div class="meta">
+    <span class="badge">❤ {{ product().likes }}</span>
+  </div>
+
+  <div class="actions">
+    <button class="btn like" type="button" (click)="like()">Like</button>
+    <button class="btn delete" type="button" (click)="requestDelete()">Delete</button>
+
+    <a class="link" [href]="whatsappShareUrl()" target="_blank" rel="noopener">
+      Share
+    </a>
+  </div>
+</div>

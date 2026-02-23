@@ -1,0 +1,109 @@
+.card {
+  background: rgba(255, 255, 255, 0.08); /* glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* IMAGE */
+img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+}
+
+/* TEXT */
+h3 {
+  margin: 10px 0 5px;
+  color: white;
+}
+
+p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 5px;
+  color: #22d3ee;
+}
+
+/* RATING + LIKES */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+/* LIKE */
+.like {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.like:hover {
+  background: #22d3ee;
+  color: black;
+}
+
+/* DELETE */
+.delete {
+  background: rgba(239,68,68,0.2);
+  color: #ef4444;
+}
+
+.delete:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* SHARE */
+.share {
+  background: rgba(255,255,255,0.1);
+  color: #7c3aed;
+}
+
+.share:hover {
+  background: #261446;
+  color: white;
+}
+a {
+  text-decoration: none;
+  background: linear-gradient(90deg, #a78bfa, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+a:hover {
+  opacity: 0.8;
+}

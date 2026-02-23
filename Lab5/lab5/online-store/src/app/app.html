@@ -1,0 +1,33 @@
+<div class="page">
+  <header class="hero">
+    <div class="hero-top">
+      <div class="brand">
+        <div class="logo">GG</div>
+        <div>
+          <h1>GG Store</h1>
+          <p class="subtitle">All for gamers — choose a category and shop smarter.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="categories">
+      @for (c of categories; track c.id) {
+        <button
+          class="cat-btn"
+          type="button"
+          [class.active]="selectedCategory() === c.id"
+          (click)="selectCategory(c.id)">
+          {{ c.name }}
+        </button>
+      }
+    </div>
+  </header>
+
+  <main class="panel">
+    @if (selectedCategory() !== null) {
+      <app-product-list [products]="getFilteredProducts()"></app-product-list>
+    } @else {
+      <p class="tip">Select a category to see products.</p>
+    }
+  </main>
+</div>

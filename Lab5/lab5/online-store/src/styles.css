@@ -1,0 +1,28 @@
+:root{
+  --bg1: #070a13;
+  --bg2: #0b1024;
+  --panel: rgba(255,255,255,.10);
+  --panel2: rgba(255,255,255,.14);
+  --text: #e5e7eb;
+  --muted: rgba(229,231,235,.75);
+  --primary: #7c3aed;
+  --primary2: #a78bfa;
+  --border: rgba(255,255,255,.18);
+  --shadow: 0 22px 55px rgba(0,0,0,.35);
+  --radius: 18px;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--text);
+
+  background:
+    radial-gradient(900px 520px at 12% 0%, rgba(124,58,237,.45), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(34,211,238,.25), transparent 55%),
+    radial-gradient(700px 420px at 70% 80%, rgba(236,72,153,.18), transparent 60%),
+    linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+  min-height: 100vh;
+}
