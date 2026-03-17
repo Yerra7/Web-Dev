@@ -14,8 +14,7 @@ export class ProductItemComponent {
   delete = output<number>();
 
   like(): void {
-  const p = this.product();
-  p.likes = p.likes === 1 ? 0 : 1;
+  this.product().likes += 1;
 }
 
   

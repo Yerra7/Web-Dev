@@ -1,0 +1,29 @@
+<section class="page">
+  <h1>Albums</h1>
+  <p class="subtitle">
+    Click an album to open details. Use Delete to remove it from the UI.
+  </p>
+
+  <div class="box" *ngIf="isLoading">Loading albums...</div>
+
+  <div class="box error" *ngIf="!isLoading && error">
+    {{ error }}
+  </div>
+
+  <ul class="list" *ngIf="!isLoading && !error">
+    <li class="row" *ngFor="let a of albums">
+      <a class="album-link" [routerLink]="['/albums', a.id]">
+        <span class="id">#{{ a.id }}</span>
+        <span class="title">{{ a.title }}</span>
+      </a>
+
+      <button
+        class="delete"
+        type="button"
+        (click)="deleteAlbum(a.id, $event)"
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
+</section>
